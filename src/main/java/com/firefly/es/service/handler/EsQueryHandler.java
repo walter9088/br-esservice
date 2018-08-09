@@ -24,22 +24,20 @@ public class EsQueryHandler {
     private String docType;
 
 
-    public EsQueryHandler(String indexName,String docType){
-        this.indexName = indexName;
-        this.docType = docType;
+    public EsQueryHandler(){
     }
 
 
     /***
      * 全标title匹配
-     * @param title
+     * @param id
      * @return
      */
-    public String queryByfullTitle(String title){
+    public String queryById(String id){
 
         JSONArray jsonArray = new JSONArray();
         BoolQueryBuilder queryBuilder = QueryBuilders.boolQuery()
-                .filter(QueryBuilders.termQuery("full_title",title));
+                .filter(QueryBuilders.termQuery("id",id));
 
         SearchResponse response = client.prepareSearch(indexName)
                 .setTypes(docType).setQuery(queryBuilder).get();

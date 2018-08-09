@@ -7,9 +7,9 @@ import java.util.Date;
 public class Test {
 
 
-    public static void main(String[] args) {
+    public static void ddddd(String[] args) {
 
-        EsQueryHandler esQueryHandler = new EsQueryHandler("zbindex","zhaobiao");
+        EsQueryHandler esQueryHandler = new EsQueryHandler();
         EsIndexHandler esIndexHandler = new EsIndexHandler();
 
         //esIndexHandler.deleIndex("zbindex");

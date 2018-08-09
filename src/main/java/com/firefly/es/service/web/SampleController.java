@@ -38,7 +38,7 @@ public class SampleController {
 
     private static final Logger log = LoggerFactory.getLogger(SampleController.class);
 
-    @RequestMapping("/test.html")
+    @RequestMapping("sample/test.html")
     @ResponseBody
     String createIndex() {
 
@@ -72,7 +72,7 @@ public class SampleController {
 
 
     @ResponseBody
-    @RequestMapping("/store.html")
+    @RequestMapping("sample/store.html")
     String store(EntityObject entityObject){
         String indexName = "zbindex";
         String docType = "zhaobiao";
@@ -84,7 +84,7 @@ public class SampleController {
     }
 
     @ResponseBody
-    @RequestMapping("/query.html")
+    @RequestMapping("sample/query.html")
     String queryTerm(EntityObject entityObject){
         String indexName = "zbindex";
         String docType = "zhaobiao";
