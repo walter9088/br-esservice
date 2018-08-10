@@ -4,6 +4,8 @@ import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.common.transport.TransportAddress;
 import org.elasticsearch.transport.client.PreBuiltTransportClient;
+import org.springframework.beans.factory.annotation.Value;
+
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
@@ -15,7 +17,9 @@ public class EsClientFactory {
     private static TransportClient client;
 
     private static String clusterName = "es";
-    private static String clusterIP = "127.0.0.1";
+
+    @Value("${es.service.ip}")
+    private static String clusterIP;
 
     static {
         Settings settings = Settings.builder()
