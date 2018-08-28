@@ -2,6 +2,7 @@ package com.firefly.es.service.web;
 
 import com.firefly.es.service.dto.CompanyDto;
 import com.firefly.es.service.dto.EntityObject;
+import com.firefly.es.service.dto.GovPurchase;
 import com.firefly.es.service.handler.EsCompanyInfoService;
 import com.firefly.es.service.handler.EsIndexHandler;
 import org.apache.commons.lang3.StringUtils;
@@ -57,6 +58,15 @@ public class CompanyInfoController {
     String queryAll(){
 
         return service.queryAll();
+
+    }
+
+    @ResponseBody
+    @RequestMapping("/gov.html")
+    String gov(@RequestBody GovPurchase dto){
+
+        System.out.println(dto.getKeywords());
+        return "sssss";
 
     }
 }

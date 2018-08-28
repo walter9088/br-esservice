@@ -6,8 +6,8 @@
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>1.3.5.RELEASE</version>
 </parent>
-<groupId>com.firefly</groupId>
-<artifactId>es-service</artifactId>
+<groupId>com.beiruan</groupId>
+<artifactId>br-esservice</artifactId>
 <version>1.0.0</version>
 <dependencies>
 	<dependency>
